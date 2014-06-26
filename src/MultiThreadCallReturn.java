@@ -48,13 +48,13 @@ public class MultiThreadCallReturn{
 		Map<String, Integer> myMap1 =  (Map<String, Integer>) future1.get();
 	
 		Future future2 = es.submit(task2);		
-		Map<String, Integer> myMap2 = (Map<String, Integer>) future1.get();
+		Map<String, Integer> myMap2 = (Map<String, Integer>) future2.get();
 	
 		Future future3 = es.submit(task3);		
-		Map<String, Integer> myMap3 = (Map<String, Integer>) future1.get();
+		Map<String, Integer> myMap3 = (Map<String, Integer>) future3.get();
 	
 		Future future4 = es.submit(task4);		
-		Map<String, Integer> myMap4 =  (Map<String, Integer>) future1.get();
+		Map<String, Integer> myMap4 =  (Map<String, Integer>) future4.get();
 		
 		es.shutdownNow();
 		
